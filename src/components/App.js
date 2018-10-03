@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 
+
 class App extends Component {
   	render() {
     	return (
-    		<div className="App">
-				<h1>Todo App</h1>
+    		<div className="container">
+				<h1 className="center">Todo App</h1>
       		</div>
     	);
   	}
