@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import './assets/css/index.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider }from 'react-redux';
-import { createStore } from 'redux';
-import rootRuducer from './reducers';
+import { createStore, applyMiddleware } from 'redux';
+import reduxPromise from 'redux-promise';
+import rootReducer from './reducers';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
-const store = createStore(rootRuducer);
+const store = createStore(rootReducer, {}, applyMiddleware(reduxPromise));
 
 
 ReactDOM.render(
