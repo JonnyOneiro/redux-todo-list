@@ -10,7 +10,12 @@ export default (state = DEFAULT_STATE, action) => {
         case types.GET_LIST_DATA:
             return { ...state, all: action.payload.data.todos };
         case types.GET_SINGLE_ITEM:
-            return {...state, single: action.payload.data.todo};
+            return { ...state, single: action.payload.data.todo };
+        case types.CLEAR_SINGLE_ITEM:
+            return { ...state, single: {} };
+        case types.TOGGLE_COMPLETE:
+            console.log('toggle complete action: ', action);
+            return { ...state, single: action.payload.data.todo };
         default:
             return state;
     }
