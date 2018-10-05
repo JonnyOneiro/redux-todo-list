@@ -12,7 +12,6 @@ class SingleItem extends Component {
     }
 
     render() {
-        console.log(this.props.item);
         const { item, toggleComplete, match: { params } } = this.props;
         return (
             <div>
